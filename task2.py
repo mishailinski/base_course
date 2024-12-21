@@ -6,10 +6,10 @@ def hyper(x_min,x_max,N):
             polN = int(N/2)
             x1 = np.linspace(x_min, -0.01, polN)
             x2 = np.linspace(0.01, x_max, polN)
-            y = 1/x1
-            plt.plot(x1,y, color= 'k')
-            y = 1/x2
-            plt.plot(x2,y, color = 'k')
+            y1 = 1/x1
+            plt.plot(x1,y1, color= 'k')
+            y2 = 1/x2
+            plt.plot(x2,y2, color = 'k')
         elif (x_min >= 0) and (x_max != 0):
             if x_min != 0:
                 x = np.linspace(x_min, x_max, N)
@@ -38,9 +38,9 @@ def hyper(x_min,x_max,N):
 
 
 
-x_min = int(input('Введите X минимальное '))
-x_max = int(input('Введите X максимальное '))
-N = int(input('Введите количество точек '))
+x_min = int(input('Введите X минимальное ->  '))
+x_max = int(input('Введите X максимальное ->  '))
+N = int(input('Введите количество точек ->  '))
 
 
 

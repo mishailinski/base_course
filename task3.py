@@ -1,10 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
+
 def ellips(x_min,x_max,N):
-       x = np.linspace(x_min, x_max, N)
-       y = abs((1-(x**2-a**2))*b**2)**0.5
+       m = np.linspace(0, 2*np.pi,N)
+       y = a * np.cos(m)
+       x = b * np.sin(m)
        plt.plot(x,y, color= 'k')
 a = 2
 b = 4
-ellips(-10,10,100)
+N = 100
+plt.axis('equal')
+ellips(a,b,N)
 plt.savefig('fig_3.png')
